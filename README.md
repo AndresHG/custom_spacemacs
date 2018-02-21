@@ -1,6 +1,33 @@
 # custom_spacemacs
 Self customized .spacemacs file, with special keybindings for OSX
 
+keybings use lambda functions to insert special characters:
+<pre>
+  (global-set-key (kbd "s-ç") 'comment-line)
+  (global-set-key (kbd "s-3") (lambda () (interactive) (insert "#")))
+  (global-set-key (kbd "s-1") (lambda () (interactive) (insert "|")))
+  (global-set-key (kbd "s-º") (lambda () (interactive) (insert "\\")))
+
+  (defun duplicate-line()
+    (interactive)
+    (move-beginning-of-line 1)
+    (kill-line)
+    (yank)
+    (open-line 1)
+    (next-line 1)
+    (yank)
+    )
+  (defun delete-line()
+    (interactive)
+    (move-beginning-of-line 1)
+    (kill-line)
+    )
+  (global-set-key (kbd "s-d") 'duplicate-line)
+  (global-set-key (kbd "s-k") 'delete-line)
+  )
+
+</pre>
+
 # Installation:
 
 Install Spacemacs from <a href="http://spacemacs.org/">here</a>.
