@@ -3,7 +3,7 @@ Self customized .spacemacs file, with special keybindings for OSX
 
 # Installation:
 
-Install Spacemacs from here [http://spacemacs.org/]
+Install Spacemacs from <a href="http://spacemacs.org/">here</a>.
 
 Download spacemacs_customized file and rename it to .spacemacs:
 
